@@ -1,12 +1,12 @@
 <?php
 
-namespace Demorose\PHPCI\Plugin;
+namespace Demorose2\PHPCI\Plugin;
 
 use PHPCI\Plugin;
 use PHPCI\Builder;
 use PHPCI\Model\Build;
 
-use Demorose\PHPCI\Plugin\Util\XUnitParser;
+use Demorose2\PHPCI\Plugin\Util\XUnitParser;
 
 /**
 * CasperJs - Allows CasperJS testing.
