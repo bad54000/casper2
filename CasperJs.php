@@ -84,7 +84,7 @@ public function execute()
 			$profil = $first ? current($this->profils) : next($this->profils);
 
 			if ($profil !== false) {
-				$cmd = "/usr/local/bin/docker-compose -f /data/docker/phpci/data/docker/docker-compose.yml run -d casperjs casperjs test casper/integration.js --domaine=http://web_1/ --savepath=/data-images --profil=$profil";
+				$cmd = "/usr/local/bin/docker-compose -f docker-compose.yml run -d casperjs casperjs test casper/integration.js --domaine=http://web_1/ --savepath=/data-images --profil=$profil";
 				echo $cmd;
 				$this->phpci->executeCommand($cmd);
 				$profils_work[$profil] = 1;
