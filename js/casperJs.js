@@ -43,6 +43,8 @@ var casperJsPlugin = ActiveBuild.UiPlugin.extend({
         this.lastData = e.queryData;
 
         var tests = this.lastData[0].meta_value;
+        
+
         var tbody = $('#casperJs-data tbody');
         tbody.empty();
 

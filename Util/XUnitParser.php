@@ -1,7 +1,6 @@
 <?php
 
-
-namespace Demorose2\PHPCI\Plugin\Util;
+namespace Demorose\PHPCI\Plugin\Util;
 
 use PHPCI\Helper\Lang;
 
@@ -15,7 +14,6 @@ class XUnitParser
      */
     protected $xUnitString;
     protected $failures = 0;
-    protected $filename;
 
     /**
      * Create a new XUnit parser for a given string.
@@ -24,7 +22,6 @@ class XUnitParser
     public function __construct($xUnitString)
     {
         $this->xUnitString = trim($xUnitString);
-        // $this->filename = $filename;
     }
 
     /**
@@ -38,6 +35,8 @@ class XUnitParser
         $testNumber = 0;
         $failures = 0;
 
+        if (!$xml->testsuite) {
+        }
         foreach ($xml->testsuite as $testsuite) {
             foreach ($testsuite->testcase as $testcase) {
                 $item = array(
@@ -54,7 +53,7 @@ class XUnitParser
                 $testNumber ++;
             }
         }
-        // return array('meta' => $this->filename, 'data' => $rtn);
+
         return $rtn;
     }
 
