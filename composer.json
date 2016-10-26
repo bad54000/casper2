@@ -11,5 +11,11 @@
     "minimum-stability" : "dev",
     "require": {
         "php" : ">=5.3.0"
+    },
+    "target-dir": "Demorose/PHPCI/Plugin",
+    "autoload": {
+        "psr-0": {
+            "Demorose\\PHPCI\\Plugin" : ""
+        }
     }
 }
